@@ -8,7 +8,7 @@ const Welcome = () => {
     useEffect(() => {
         Animated.timing(fadeAnim, {
             toValue: 1,
-            duration: 2500,
+            duration: 3500,
             useNativeDriver: true,
         }).start();
     }, [fadeAnim]);
