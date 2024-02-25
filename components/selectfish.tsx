@@ -1,29 +1,22 @@
-import { Image, StyleSheet, Text, View, ScrollView, TouchableWithoutFeedback } from 'react-native';
-import FishEntry from './fishentry';
+import { Image, StyleSheet, Text, View, ScrollView } from 'react-native';
 
-const AddMenu = () => {
+const SelectFish = () => {
     return (
         <View>
             <Image source={require('../assets/addmenu.png')} 
             style={styles.base}/>
             <ScrollView style={styles.fishlist}
             contentContainerStyle={{ flexGrow: 1, alignItems: 'center'}}>
-                <TouchableWithoutFeedback>
-                    <FishEntry name="clownfish"/>
-                </TouchableWithoutFeedback>
-                <TouchableWithoutFeedback>
-                    <FishEntry name="angelfish"/>
-                </TouchableWithoutFeedback>
-                <TouchableWithoutFeedback>
-                    <FishEntry name="sardine"/>
-                </TouchableWithoutFeedback>
+                <FishEntry name="clownfish"/>
+                <FishEntry name="angelfish"/>
+                <FishEntry name="sardine"/>
             </ScrollView>
             <Text style={styles.fishlabel}>Add Fish</Text>
             <Text style={styles.desc}>Recommended fish to add based on your tank water!</Text>
         </View>
     )
 }
-export default AddMenu;
+export default SelectFish;
 
 const styles = StyleSheet.create({
     desc: {
@@ -41,7 +34,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Helvetica',
         fontWeight: '500',
         fontSize: 30,
-        left: 74,
+        left: 60,
         top: -480,
         position: 'absolute',
         color: '#383a2e'

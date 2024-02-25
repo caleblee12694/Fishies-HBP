@@ -1,6 +1,8 @@
 import { Image, StyleSheet, Text, View, ScrollView } from 'react-native';
 import FishEntry from './fishentry';
 
+const fishes = ['angelfish', 'sardine', 'clownfish', 'sardine', 'angelfish', 'sardine', 'sardine', 'clownfish'];
+
 const ListMenu = () => {
     return (
         <View>
@@ -8,14 +10,11 @@ const ListMenu = () => {
             style={styles.base}/>
             <ScrollView style={styles.fishlist}
             contentContainerStyle={{ flexGrow: 1, alignItems: 'center'}}>
-                <FishEntry name="angelfish"/>
-                <FishEntry name="sardine"/>
-                <FishEntry name="clownfish"/>
-                <FishEntry name="sardine"/>
-                <FishEntry name="angelfish"/>
-                <FishEntry name="sardine"/>
-                <FishEntry name="sardine"/>
-                <FishEntry name="clownfish"/>
+                {fishes.map((fish) => {
+                    return (
+                        <FishEntry name={fish}/>
+                    );
+                })}
             </ScrollView>
             <Text style={styles.fishlabel}>List of Fish</Text>
             <Text style={styles.desc}>Here is a list of all the fishes in your tank!</Text>
