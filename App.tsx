@@ -1,9 +1,4 @@
-
-import { StyleSheet, Text, View } from "react-native";
-import Background from "./components/background";
 import { fetchFishData } from "./firebase/fish_api";
-
-
 import { StatusBar } from 'expo-status-bar';
 import { Image, ImageBackground, StyleSheet, Text, View, Dimensions } from 'react-native';
 import { TouchableWithoutFeedback, TouchableHighlight, Animated } from 'react-native';
