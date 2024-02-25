@@ -1,15 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Background from './components/background'
-import {write_to_db} from './write_to_db.js';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import Background from "./components/background";
+import { fetchFishData } from "./firebase/fish_api";
 
 export default function App() {
+  // Fetch data from API and extract the value from the promise.
+  fetchFishData();
 
-  console.log("Writing to database");
-  write_to_db();
+ // console.log("Final ans : "+ arrayFish());
   return (
     <View style={styles.container}>
-      <Background/>
+      <Background />
     </View>
   );
 }
@@ -17,8 +18,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
