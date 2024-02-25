@@ -190,6 +190,9 @@ export default function App() {
   };
   function showMenu() {
     setMenu(true);
+    setListMenu(false);
+    setAddMenu(false);
+    setReminderMenu(false);
   }
   function hideMenu() {
     setMenu(false);
