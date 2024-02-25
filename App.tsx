@@ -1,7 +1,7 @@
 import { fetchFishData } from "./firebase/fish_api";
 import { StatusBar } from 'expo-status-bar';
 import { Image, ImageBackground, StyleSheet, Text, View, Dimensions } from 'react-native';
-import { TouchableWithoutFeedback, TouchableHighlight, Animated } from 'react-native';
+import { TouchableWithoutFeedback, TouchableHighlight, Animated, LogBox } from 'react-native';
 import { useState, useEffect, useRef } from 'react';
 import Welcome from './components/welcome';
 import MenuButton from './components/menubutton';
@@ -16,6 +16,7 @@ import AddMenu from './components/realaddmenu';
 import ReminderFish from './components/reminderfish';
 import Reminders from './components/reminders';
 
+LogBox.ignoreAllLogs();
 
 const ClownLeft = props => {
   const screenWidth = Dimensions.get('window').width;
@@ -171,7 +172,7 @@ const SardineRight = props => {
 
 
 export default function App() {
-    
+  
   const [welcome, setWelcome] = useState(true);
   const [home, setHome] = useState(false);
   const [menu, setMenu] = useState(false);

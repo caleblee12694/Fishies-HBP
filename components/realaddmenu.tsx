@@ -2,6 +2,8 @@ import { Image, StyleSheet, Text, View, ScrollView, TouchableWithoutFeedback } f
 import { useState } from 'react'
 import FishEntry from './fishentry';
 
+
+
 const AddMenu = () => {
     const [select, setSelect] = useState(false);
 
