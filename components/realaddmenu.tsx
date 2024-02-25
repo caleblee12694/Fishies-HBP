@@ -1,23 +1,37 @@
 import { Image, StyleSheet, Text, View, ScrollView, TouchableWithoutFeedback } from 'react-native';
+import { useState } from 'react'
 import FishEntry from './fishentry';
 
 const AddMenu = () => {
+    const [select, setSelect] = useState(false);
+
+    function nextPage() {
+        setSelect(true);
+    }
+
     return (
         <View>
-            <Image source={require('../assets/addmenu.png')} 
-            style={styles.base}/>
-            <ScrollView style={styles.fishlist}
-            contentContainerStyle={{ flexGrow: 1, alignItems: 'center'}}>
-                <TouchableWithoutFeedback>
-                    <FishEntry name="clownfish"/>
+            <Image source={require('../assets/addmenu.png')}
+                style={styles.base} />
+            {select === false && <ScrollView style={styles.fishlist}
+                contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }}>
+                <TouchableWithoutFeedback onPress={nextPage}>
+                    <View>
+                        <FishEntry name="clownfish" />
+                    </View>
                 </TouchableWithoutFeedback>
-                <TouchableWithoutFeedback>
-                    <FishEntry name="angelfish"/>
+                <TouchableWithoutFeedback onPress={nextPage}>
+                    <View>
+                        <FishEntry name="angelfish" />
+                    </View>
                 </TouchableWithoutFeedback>
-                <TouchableWithoutFeedback>
-                    <FishEntry name="sardine"/>
+                <TouchableWithoutFeedback onPress={nextPage}>
+                    <View>
+                        <FishEntry name="sardine" />
+                    </View>
                 </TouchableWithoutFeedback>
-            </ScrollView>
+            </ScrollView>}
+            {select === true && <Image source={require('../assets/fishselect.png')} />}
             <Text style={styles.fishlabel}>Add Fish</Text>
             <Text style={styles.desc}>Recommended fish to add based on your tank water!</Text>
         </View>

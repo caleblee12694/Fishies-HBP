@@ -2,18 +2,7 @@ import { Image, StyleSheet, Text, View, ScrollView } from 'react-native';
 
 const SelectFish = () => {
     return (
-        <View>
-            <Image source={require('../assets/addmenu.png')} 
-            style={styles.base}/>
-            <ScrollView style={styles.fishlist}
-            contentContainerStyle={{ flexGrow: 1, alignItems: 'center'}}>
-                <FishEntry name="clownfish"/>
-                <FishEntry name="angelfish"/>
-                <FishEntry name="sardine"/>
-            </ScrollView>
-            <Text style={styles.fishlabel}>Add Fish</Text>
-            <Text style={styles.desc}>Recommended fish to add based on your tank water!</Text>
-        </View>
+        <Image source={require('../assets/fishselect.png')}/>
     )
 }
 export default SelectFish;
