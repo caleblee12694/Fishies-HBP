@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from 'firebase/firestore/lite';
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -12,10 +14,13 @@ const firebaseConfig = {
   projectId: "hackbeanpot-cl",
   storageBucket: "hackbeanpot-cl.appspot.com",
   messagingSenderId: "206122799554",
-  appId: "1:206122799554:web:6fbda6ed4371abe6d9865b",
-  measurementId: "G-TS733X55F7"
+  appId: "1:206122799554:web:f8c047ac1ae0974dd9865b",
+  measurementId: "G-39TDJNMWML"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+// Get a reference to the database service
+export const db = getFirestore(app);
