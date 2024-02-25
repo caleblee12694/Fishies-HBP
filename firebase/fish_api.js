@@ -25,6 +25,7 @@ export function fetchFishData() {
             if (this.readyState === this.DONE) {
                 // This is the data that is returned from the API
                 const fishData = JSON.parse(this.responseText);
+                arrayFish();
             }
         });
 
@@ -99,11 +100,13 @@ function passFishData(fishNumber) {
  * To return an array of species in the fishData collection.
  */
 export function arrayFish() {
-    const res = [];
-    const dbSnapshot = db.collection.get();
-    dbSnapshot.forEach((doc) => {
-        res.push(doc.data());
-    });
-    console.log("ArrayFish: "+ res);
-    return res;
+    // const res = [];
+    // db.collection('fishData').get().then((snapshot) => {
+    //     snapshot.forEach((doc) => {
+    //         res.push(doc.data());
+    //     });
+    // });
+   
+    // console.log("ArrayFish: "+ res);
+    // return res;
 }
