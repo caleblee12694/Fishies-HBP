@@ -1,11 +1,18 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import { ImageBackground, Image, StyleSheet, Text, View } from 'react-native';
 
 const Welcome = () => {
-    return(
-        <Image source={require('../assets/fishmenu.png')}></Image>
+    return (
+        <View>
+            <Image source={require('../assets/fishmenu.png')} />
+        </View>
     )
 }
 export default Welcome;
 
 const styles = StyleSheet.create({
-});
+    exitbutton: {
+        position: 'absolute',
+        left: 279
+    }
+}
+);
