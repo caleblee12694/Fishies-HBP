@@ -6,6 +6,7 @@ const Background = () => {
         <View style={styles.background}>
         <ImageBackground source={require('../assets/background.png')}
         style={styles.background}>
+            
         </ImageBackground>
         </View>
     )
@@ -16,6 +17,7 @@ const styles = StyleSheet.create({
     background: {
         flex: 1,
         justifyContent: 'center',
-        width: '100%'
+        width: '100%',
+        
     }
 });
