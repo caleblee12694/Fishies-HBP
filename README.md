@@ -17,7 +17,7 @@ $ npm start
 The above commands will run the application in development mode.
 Open http://localhost:8081 to view it in the browser.
 
-The page will reload and reflect changes if you make edits to the souce code.
+The page will reload and reflect changes if you make edits to the source code.
 
 You can also preview the application on a mobile device by installing the Expo development tool described here: https://expo.dev
 
