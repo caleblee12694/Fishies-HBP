@@ -3,19 +3,22 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from 'firebase/firestore/lite';
 
+// Ensure that the environment variables are loaded
+console.log("Node environment: " + process.env.NODE_ENV);
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyC0X1SLcI_lid-NAPLJIIc6eO4Rf-V8gzI",
-  authDomain: "hackbeanpot-cl.firebaseapp.com",
-  projectId: "hackbeanpot-cl",
-  storageBucket: "hackbeanpot-cl.appspot.com",
-  messagingSenderId: "206122799554",
-  appId: "1:206122799554:web:f8c047ac1ae0974dd9865b",
-  measurementId: "G-39TDJNMWML"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
 // Initialize Firebase
